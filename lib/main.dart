@@ -12,6 +12,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  int likes = 40;
+  var liked = false;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -53,8 +56,18 @@ class _MyAppState extends State<MyApp> {
                     Container(
                       child: Row(
                         children: [
-                          Icon(Icons.star,color: Colors.red,size: 30,),
-                          Text("40",style: TextStyle(fontSize: 17),)
+                          IconButton(onPressed: () {
+                            setState(() {
+                              liked = !liked;
+                              if(liked){
+                                likes += 1;
+                              }else{
+                                likes -=1;
+                              }
+                            });
+                          }, icon: Icon(Icons.star),color: Colors.red,iconSize: 30,),
+                          Text("$likes",style: TextStyle(fontSize: 17),),
+
                         ],
                       ),
                     )
