@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
                                 likes -=1;
                               }
                             });
-                          }, icon: Icon(Icons.star),color: Colors.red,iconSize: 30,),
+                          }, icon: Icon(Icons.star),color: liked ? Colors.red : Colors.black,iconSize: 30,),
                           Text("$likes",style: TextStyle(fontSize: 17),),
 
                         ],
