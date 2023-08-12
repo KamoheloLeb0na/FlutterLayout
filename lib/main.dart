@@ -101,7 +101,7 @@ class _MyAppState extends State<MyApp> {
                       child: Column(
                         children: [
                           Icon(Icons.share ),
-                          Text("Call")
+                          Text("Share")
                         ],
                       ),
                     ),
